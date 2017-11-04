@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>FCC Wikipedia Viewr</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://use.fontawesome.com/054e3dd8bc.js"></script>
+
+</head>
+
+<body>
+
+<div class="container-fluid outter d-flex">
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <h1>Wikipedia Search</h1>
+    <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><button id="random" class="btn btn-success m-3"><i class="mr-2 fa fa-random" aria-hidden="true"></i>Random Page</button></a>
+    <div class="row m-2">
+      <div class="input-group col-lg-6 offset-lg-3">
+        <span class="input-group-btn">
+          <button id="search-button" class="btn btn-secondary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </span>
+          <input id="search" type="text" class="form-control" placeholder="Search for..." aria-label="Search for... onkeypress="handleKeyPress(event)"">
+          <span class="input-group-btn">
+            <button id="delete-button" class="btn btn-secondary" type="button"><i class="fa fa-times" aria-hidden="true"></i></button>
+          </span>
+        </div>
+    </div>
+      <div class="row">
+        <div class="card-deck container-fluid d-flex flex-column m-3 col-lg-12 flex-nowrap ustify-content-center align-items-center"></div>
+      </div>
+  </div>
+</div>
+  <!--  -->
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <!-- **************************My Script File******************************* -->
+  <script type="text/javascript" src="scripts.js">
+</body>
+
+</html>
