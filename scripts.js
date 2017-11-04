@@ -1,3 +1,4 @@
+
 // when called performs fetch to wikipedia api and displays data
 function doWikiSearch() {
   let searchText = document.querySelector('#search').value;
