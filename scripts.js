@@ -9,7 +9,7 @@ function doWikiSearch() {
     })
     .then(function(data) {
       let output = '<h2 class="m-4">Wikipedia Search Results</h2>';
-      //loop through the data
+      //loop through the data and display to page
       for (var i = 0; i < data[1].length; i++) {
         let cardUrl = data[3][i];
         output +=
@@ -21,11 +21,6 @@ function doWikiSearch() {
           '</div> <!-- end card-body -->' +
           '</div> <!-- end card -->' +
           '</a>';
-
-        // createContentCard();
-        // document.querySelector('.card-title').innerHTML = data[1][i];
-        // document.querySelector('.card-text').innerHTML = data[2][i];
-        // document.querySelector('.btn-primary').href = data[3][i];
       }
       document.querySelector('.card-deck').innerHTML = output;
     });
@@ -34,12 +29,6 @@ function doWikiSearch() {
 function clearSearch() {
   document.querySelector('#search').value = "";
 }
-
-//call to create content card for search results
-// function createContentCard() {
-//   var card = '<div class=\"card\" style=\"width: 100vh;\"><div class=\"card-body\"><h4 class=\"card-title\">Card title</h4><p class="card-text">Some quick example text to build on the card title and make up the bulk of the card\'s content.</p><a href=\"#\" target="_blank" class=\"btn btn-primary\">Go to wiki</a></div></div>';
-//   document.querySelector('.card-deck').innerHTML += card;
-// }
 // buttons and search input event listeners
 document.querySelector('#search').addEventListener('keydown', function handleKeyPress(e){if (e.keyCode === 13) {doWikiSearch();}});
 document.querySelector('#search-button').addEventListener('click', doWikiSearch);
