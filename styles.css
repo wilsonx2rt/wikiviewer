@@ -1,20 +1,6 @@
 body {
   height: 100vh;
 }
-.outter {
-  height: 100vh;
-  max-width: 600px;
-}
-.input-group {
-  height: 40px;
-  min-width: 400px;
-  margin-bottom: 10px;
-}
-.card-deck {
-  /*max-width: 712px;*/
-}
-.card {
-  min-height: 200px;
-  margin-top: 10px;
-  max-width: 600px;
+* {
+  border: mistyrose 1px solid;
 }

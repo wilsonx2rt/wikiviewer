@@ -24,10 +24,10 @@ function clearSearch() {
 
 //call to create content card for search results
 function createContentCard() {
-  var card = '<div class=\"card\" style=\"width: 100vh;\"><div class=\"card-body\"><h4 class=\"card-title\">Card title</h4><p class="card-text">Some quick example text to build on the card title and make up the bulk of the card\'s content.</p><a href=\"#\" class=\"btn btn-primary\">Go somewhere</a></div></div>';
+  var card = '<div class=\"card\" style=\"width: 100vh;\"><div class=\"card-body\"><h4 class=\"card-title\">Card title</h4><p class="card-text">Some quick example text to build on the card title and make up the bulk of the card\'s content.</p><a href=\"#\" target="_blank" class=\"btn btn-primary\">Go to wiki</a></div></div>';
   document.querySelector('.card-deck').innerHTML += card;
 }
-// buttons and search input event listeners  
+// buttons and search input event listeners
 document.querySelector('#search').addEventListener('keydown', function handleKeyPress(e){if (e.keyCode === 13) {doWikiSearch();}});
 document.querySelector('#search-button').addEventListener('click', doWikiSearch);
 document.querySelector('#delete-button').addEventListener('click', clearSearch);
