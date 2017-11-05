@@ -1,4 +1,4 @@
-//fetch wikipedia api and displays data
+//fetch to wikipedia api and displays data
 function doWikiSearch() {
   let searchText = document.querySelector('#search').value;
   let searchURL = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${searchText}&format=json&origin=*`;
@@ -25,8 +25,10 @@ function doWikiSearch() {
     });
 }
 // call to delete content of search field
-function clearSearch() {
+function clearSearchAndResults() {
+  let blank = "";
   document.querySelector('#search').value = "";
+  document.querySelector('.card-deck').innerHTML = blank;
 }
 // buttons and search input event listeners
 document.querySelector('#search').addEventListener('keydown', function handleKeyPress(e) {
@@ -35,4 +37,4 @@ document.querySelector('#search').addEventListener('keydown', function handleKey
   }
 });
 document.querySelector('#search-button').addEventListener('click', doWikiSearch);
-document.querySelector('#delete-button').addEventListener('click', clearSearch);
+document.querySelector('#delete-button').addEventListener('click', clearSearchAndResults);
