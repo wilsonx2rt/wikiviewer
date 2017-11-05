@@ -12,9 +12,16 @@
 
 <body>
 
-  <div class="container text-center">
+  <div class="container d-flex flex-column text-center justify-content-center" id="outer-wraper">
     <h1>Wikipedia Search</h1>
     <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><button id="random" class="btn btn-success m-3"><i class="mr-2 fa fa-random" aria-hidden="true"></i>Random Page</button></a>
+    <div class="input-group d-flex justify-content-center">
+      <span class="input-group-addon" id="search-button"><i class="fa fa-search" aria-hidden="true"></i></span>
+      <input type="text" id="search" name="search-box" value="" size="30" placeholder="Search for...">
+      <span class="input-group-addon" id="delete-button"><i class="fa fa-times" aria-hidden="true"></i></span>
+    </div>
+    <!-- search content will be programatically added to .card-deck -->
+    <div class="card-deck"></div>
   </div>
 
 

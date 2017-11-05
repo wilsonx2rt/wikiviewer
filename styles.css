@@ -1,5 +1,8 @@
 body {
-  height: 100vh;
+  min-height: 100vh;
+}
+#outer-wraper {
+  min-height: 100vh;
 }
 * {
   border: mistyrose 1px solid;
