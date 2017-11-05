@@ -1,5 +1,4 @@
-
-// when called performs fetch to wikipedia api and displays data
+//fetch wikipedia api and displays data
 function doWikiSearch() {
   let searchText = document.querySelector('#search').value;
   let searchURL = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${searchText}&format=json&origin=*`;
@@ -30,6 +29,10 @@ function clearSearch() {
   document.querySelector('#search').value = "";
 }
 // buttons and search input event listeners
-document.querySelector('#search').addEventListener('keydown', function handleKeyPress(e){if (e.keyCode === 13) {doWikiSearch();}});
+document.querySelector('#search').addEventListener('keydown', function handleKeyPress(e) {
+  if (e.keyCode === 13) {
+    doWikiSearch();
+  }
+});
 document.querySelector('#search-button').addEventListener('click', doWikiSearch);
 document.querySelector('#delete-button').addEventListener('click', clearSearch);
