@@ -8,17 +8,26 @@ function doWikiSearch() {
       return res.json();
     })
     .then(function(data) {
+      let output = '<h2 class="m-4">Wikipedia Search Results</h2>';
+      //loop through the data
       for (var i = 0; i < data[1].length; i++) {
-        console.log(data[1][i]);
-
-        
+        let cardUrl = data[3][i];
+        output +=
+          `<a href="${cardUrl}" target="_blank">` +
+          '<div class="card mb-3" style="width: 70vw;">' +
+          '<div class="card-body">' +
+          '<h4 class="card-title">' + data[1][i] + '</h4>' +
+          '<p class="card-text">' + data[2][i] + '</p>' +
+          '</div> <!-- end card-body -->' +
+          '</div> <!-- end card -->' +
+          '</a>';
 
         // createContentCard();
         // document.querySelector('.card-title').innerHTML = data[1][i];
         // document.querySelector('.card-text').innerHTML = data[2][i];
         // document.querySelector('.btn-primary').href = data[3][i];
       }
-
+      document.querySelector('.card-deck').innerHTML = output;
     });
 }
 // call to delete content of search field
