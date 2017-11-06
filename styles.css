@@ -15,6 +15,11 @@ a:hover {
   text-decoration: none;
   color: black;
 }
+.card:hover {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
 
 /** {
   border: mistyrose 1px solid;
