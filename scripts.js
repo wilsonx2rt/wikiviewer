@@ -36,5 +36,10 @@ document.querySelector('#search').addEventListener('keydown', function handleKey
     doWikiSearch();
   }
 });
+document.querySelector('#search').addEventListener('keydown', function handleKeyPress(e) {
+  if (e.keyCode === 27) {
+    clearSearchAndResults();
+  }
+});
 document.querySelector('#search-button').addEventListener('click', doWikiSearch);
 document.querySelector('#delete-button').addEventListener('click', clearSearchAndResults);
